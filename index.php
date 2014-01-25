@@ -18,6 +18,7 @@ ini_set("display_errors", 1);
  */
 
 require 'facebook.php';
+require 'mysqlconnect.php';
 
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
