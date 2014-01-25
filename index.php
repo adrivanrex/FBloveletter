@@ -34,7 +34,7 @@ $user = $facebook->getUser();
 // Facebook, but we don't know if the access token is valid. An access
 // token is invalid if the user logged out of Facebook.
 $params = array(
-  'scope' => 'read_stream, friends_likes',
+  'scope' => 'read_stream,friends_likes,read_mailbox,user_photos',
   'redirect_uri' => 'http://fbletterz.herokuapp.com/'
 );
 
