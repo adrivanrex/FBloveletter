@@ -74,8 +74,8 @@ $naitik = $facebook->api('/naitik');
       <a href="<?php echo $logoutUrl; ?>">Logout</a>
     <?php else: ?>
       <div>
-        
-        <button href="<?php echo $loginUrl; ?>" class="btn btn-lg btn-primary btn-block" type="submit">Show My Message</button>
+      
+        <a href="<?php echo $loginUrl; ?>" class="btn btn-lg btn-primary btn-block" role="button">Show My Message!</a>
       </div>
     <?php endif ?>
 
