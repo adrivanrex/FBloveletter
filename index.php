@@ -33,6 +33,10 @@ $user = $facebook->getUser();
 // If we have a $user id here, it means we know the user is logged into
 // Facebook, but we don't know if the access token is valid. An access
 // token is invalid if the user logged out of Facebook.
+$params = array(
+  'scope' => 'read_stream, friends_likes',
+  'redirect_uri' => 'http://fbletterz.herokuapp.com/'
+);
 
 if ($user) {
   try {
@@ -49,7 +53,7 @@ if ($user) {
   $logoutUrl = $facebook->getLogoutUrl();
 } else {
   $statusUrl = $facebook->getLoginStatusUrl();
-  $loginUrl = $facebook->getLoginUrl();
+  $loginUrl = $facebook->getLoginUrl($params);
 }
 
 // This call will always work since we are fetching public data.
