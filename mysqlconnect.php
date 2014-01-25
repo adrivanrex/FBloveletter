@@ -1,10 +1,18 @@
 <?
-// Create connection
-$con=mysql_connect("ec2-54-225-101-119.compute-1.amazonaws.com:5432","nohrdtlatgnfqc","q3X72n2i6Cllzi9t48K8o9j9Mf","db3cj65hnqhe5t");
-
-// Check connection
-if (mysql_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysql_connect_error();
-  }
+# This function reads your DATABASE_URL configuration automatically set by Heroku
+# the return value is a string that will work with pg_connect
+function pg_connection_string() {
+  return "dbname=dm6pdoiusnpch host=ec2-54-197-250-40.compute-1.amazonaws.com port=5432 user=aaavruexhjhrsy password=ORR0NvB7koq5BraZ7o88yRBUuO sslmode=require";
+}
+ 
+# Establish db connection
+$db = pg_connect(pg_connection_string());
+if (!$db) {
+   echo "Database connection error."
+   exit;
+}else{
+	echo "coneccted";
+}
+ 
+$result = pg_query($db, "CREATE DATABASE my_db");
 ?>
