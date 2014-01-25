@@ -63,7 +63,7 @@ $naitik = $facebook->api('/naitik');
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </head>
@@ -75,7 +75,7 @@ $naitik = $facebook->api('/naitik');
     <?php else: ?>
       <div>
         
-        <button class="btn btn-lg btn-primary btn-block" type="submit"><a href="<?php echo $loginUrl(); ?>">Show My Message</a></button>
+        <button href="<?php echo $loginUrl; ?>" class="btn btn-lg btn-primary btn-block" type="submit">Show My Message</button>
       </div>
     <?php endif ?>
 
