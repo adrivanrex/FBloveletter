@@ -75,7 +75,7 @@ $naitik = $facebook->api('/naitik');
     <?php else: ?>
       <div>
         
-        <button class="btn btn-lg btn-primary btn-block" type="submit"> Show My Message</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><a href="<?php echo $loginUrl(); ?>">Show My Message</a></button>
       </div>
     <?php endif ?>
 
